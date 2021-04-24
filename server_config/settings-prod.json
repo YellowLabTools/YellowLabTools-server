@@ -1,12 +1,6 @@
 {
     "serverPort": 80,
     "googleAnalyticsId": "",
-    "screenshotWidth": {
-        "phone": 360,
-        "tablet": 420,
-        "desktop": 600,
-        "desktop-hd": 600
-    },
     "baseUrl": "/",
     "authorizedKeys": {
         
