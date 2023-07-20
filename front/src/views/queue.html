@@ -1,4 +1,4 @@
-<p ng-if="url">Tested url: &nbsp; <a href="{{url}}" target="_blank" class="testedUrl">{{url}}</a></p>
+<p ng-if="url">Tested url: &nbsp; <a href="{{url}}" target="_blank" rel="noopener noreferrer" class="testedUrl">{{url}}</a></p>
 
 <div ng-if="!notFound && !connectionLost">
     <div ng-if="status.statusCode == 'failed'">

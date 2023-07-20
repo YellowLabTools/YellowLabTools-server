@@ -206,7 +206,7 @@
     });
 
     function getUrlLink(url, maxLength) {
-        return '<a href="' + url + '" target="_blank" title="' + url + '">' + shortenUrl(url, maxLength) + '</a>';
+        return '<a href="' + url + '" target="_blank" rel="noopener noreferrer" title="' + url + '">' + shortenUrl(url, maxLength) + '</a>';
     }
 
     offendersDirectives.directive('urlLink', function() {
@@ -216,7 +216,7 @@
                 url: '=',
                 maxLength: '='
             },
-            template: '<a href="{{url}}" target="_blank" title="{{url}}">{{url | shortenUrl:maxLength}}</a>',
+            template: '<a href="{{url}}" target="_blank" rel="noopener noreferrer" title="{{url}}">{{url | shortenUrl:maxLength}}</a>',
             replace: true
         };
     });
