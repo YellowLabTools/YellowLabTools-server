@@ -32,14 +32,12 @@
     "compression": "1.7.3",
     "cors": "2.8.5",
     "debug": "4.3.4",
-    "easyxml": "2.0.1",
     "ejs": "2.6.1",
     "express": "4.16.4",
-    "fontkit": "1.7.8",
     "q": "1.5.1",
     "rimraf": "2.6.3",
     "temporary": "0.0.8",
-    "yellowlabtools": "3.0.0"
+    "yellowlabtools": "file:../YellowLabTools-bis"
   },
   "devDependencies": {
     "chai": "~4.2.0",
