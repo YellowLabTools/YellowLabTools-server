@@ -1,6 +1,6 @@
 {
   "name": "yellowlabtools-server",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The web server of YellowLabTools, and online tool that audits a webpage for performance and front-end quality issues",
   "license": "GPL-2.0",
   "author": {
@@ -16,7 +16,7 @@
     "server": "./bin/server.js"
   },
   "engines": {
-    "node": ">= 12.0"
+    "node": ">= 16.0"
   },
   "dependencies": {
     "angular": "1.7.7",
@@ -26,19 +26,18 @@
     "angular-resource": "1.7.7",
     "angular-route": "1.7.7",
     "angular-sanitize": "1.7.7",
+    "aws-sdk": "2.1413.0",
     "body-parser": "1.18.3",
     "chart.js": "2.7.3",
     "compression": "1.7.3",
     "cors": "2.8.5",
-    "debug": "4.1.1",
-    "easyxml": "2.0.1",
+    "debug": "4.3.4",
     "ejs": "2.6.1",
     "express": "4.16.4",
-    "fontkit": "1.7.8",
     "q": "1.5.1",
     "rimraf": "2.6.3",
     "temporary": "0.0.8",
-    "yellowlabtools": "file:../YellowLabTools"
+    "yellowlabtools": "file:../YellowLabTools-bis"
   },
   "devDependencies": {
     "chai": "~4.2.0",
@@ -54,11 +53,10 @@
     "grunt-contrib-watch": "~1.1.0",
     "grunt-env": "~0.4.4",
     "grunt-filerev": "~2.3.1",
-    "grunt-inline-angular-templates": "~0.1.5",
+    "grunt-inline-angular-templates": "^0.1.5",
     "grunt-mocha-test": "~0.13.3",
     "grunt-parallel": "~0.5.1",
     "grunt-usemin": "~3.1.1",
-    "jimp": "0.6.0",
     "matchdep": "~2.0.0",
     "mocha": "~5.2.0",
     "sinon": "~7.2.3",

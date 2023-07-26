@@ -126,7 +126,7 @@
                     <div ng-if="policyName === 'cssParsingErrors'">
                         <b>{{offender.error}}</b>
                         <file-and-line file="offender.file" line="offender.line" column="offender.column"></file-and-line>
-                        <span ng-if="offender.file">(<a href="http://jigsaw.w3.org/css-validator/validator?profile=css3&usermedium=all&warning=no&uri={{offender.file | encodeURIComponent}}" target="_blank">Check on the W3C validator</a>)</span>
+                        <span ng-if="offender.file">(<a href="http://jigsaw.w3.org/css-validator/validator?profile=css3&usermedium=all&warning=no&uri={{offender.file | encodeURIComponent}}" target="_blank" rel="noopener noreferrer">Check on the W3C validator</a>)</span>
                     </div>
 
                     <div ng-if="policyName === 'cssImports'">
@@ -323,7 +323,7 @@
             <div ng-repeat="image in rule.offendersObj.list.images | orderBy:'-gain'">
                 <div>
                     Current file: <url-link url="image.url" max-length="50"></url-link>
-                    <div><a href="{{image.url}}" target="_blank"><img ng-src="{{image.url | https}}" class="checker" /></a></div>
+                    <div><a href="{{image.url}}" target="_blank" rel="noopener noreferrer"><img ng-src="{{image.url | https}}" class="checker" /></a></div>
                 </div>
                 <div>
                     <p ng-if="!image.isCompressible || image.isCompressed">Current weight: {{image.originalWeigth | bytes}}</p>

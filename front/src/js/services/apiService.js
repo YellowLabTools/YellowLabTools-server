@@ -7,7 +7,6 @@ apiService.factory('API', ['$location', 'Runs', 'Results', function($location, R
         launchTest: function(url, settings) {
             var runObject = {
                 url: url,
-                waitForResponse: false,
                 screenshot: true,
                 device: settings.device,
                 waitForSelector: settings.waitForSelector,
