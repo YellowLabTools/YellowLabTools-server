@@ -339,6 +339,23 @@
         </div>
     </div>
 
+    <div ng-if="policyName === 'oldImageFormats'">
+        <h3 ng-if="rule.value > 0">{{rule.value | bytes}} could be saved on <ng-pluralize count="rule.offendersObj.list.images.length" when="{'one': '1 image', 'other': '{} images'}"></ng-pluralize></h3>
+        <div class="imageOffenders">
+            <div ng-repeat="image in rule.offendersObj.list.images | orderBy:'-maxGain'">
+                <div>
+                    Current file: <url-link url="image.url" max-length="50"></url-link>
+                    <div><a href="{{image.url}}" target="_blank" rel="noopener noreferrer"><img ng-src="{{image.url | https}}" class="checker" /></a></div>
+                </div>
+                <div>
+                    <p>Current weight as a <span>{{image.originalFormat}}</span>:<br/>{{image.originalWeigth | bytes}}</p>
+                    <p ng-if="image.webpSize">Converted to WebP:<br/>{{image.webpSize | bytes}} (<b>-{{image.webpGain | bytes}}</b>)</p>
+                    <p ng-if="image.avifSize">Converted to AVIF:<br/>{{image.avifSize | bytes}} (<b>-{{image.avifGain | bytes}}</b>)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div ng-if="policyName === 'compression'">
         <h3 ng-if="rule.value > 0">{{rule.value | bytes}} could be saved on <ng-pluralize count="rule.offendersObj.list.files.length" when="{'one': '1 file', 'other': '{} files'}"></ng-pluralize></h3>
         <div class="table">
