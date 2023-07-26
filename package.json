@@ -16,7 +16,7 @@
     "server": "./bin/server.js"
   },
   "engines": {
-    "node": ">= 12.0"
+    "node": ">= 16.0"
   },
   "dependencies": {
     "angular": "1.7.7",
