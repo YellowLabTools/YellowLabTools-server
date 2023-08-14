@@ -37,7 +37,7 @@
     "q": "1.5.1",
     "rimraf": "2.6.3",
     "temporary": "0.0.8",
-    "yellowlabtools": "file:../YellowLabTools-bis"
+    "yellowlabtools": "YellowLabTools/YellowLabTools#webp-avif"
   },
   "devDependencies": {
     "chai": "~4.2.0",

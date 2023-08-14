@@ -304,4 +304,10 @@
         };
     });
 
+    offendersDirectives.filter('max2decimals', function() {
+        return function(nbr) {
+            return Math.round(nbr * 100) / 100;
+        };
+    });
+
 })();
