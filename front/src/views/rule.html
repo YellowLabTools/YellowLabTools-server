@@ -378,14 +378,20 @@
     </div>
 
     <div ng-if="policyName === 'imagesExcessiveDensity'">
+        <h3 ng-if="rule.value > 0">{{rule.value | bytes}} could be saved on <ng-pluralize count="rule.offendersObj.length" when="{'one': '1 image', 'other': '{} images'}"></ng-pluralize></h3>
         <div class="imageOffenders">
-            <div ng-repeat="image in rule.offendersObj.list | orderBy:'-gain'">
+            <div ng-repeat="image in rule.offendersObj | orderBy:'-gain'">
                 <div>
                     Current file: <url-link url="image.url" max-length="50"></url-link>
                     <div><a href="{{image.url}}" target="_blank" rel="noopener noreferrer"><img ng-src="{{image.url | https}}" class="checker" /></a></div>
                 </div>
                 <div>
-                    <p>Display density: {{image.displayDensity | max2decimals}}x</p>
+                    <p>
+                        Current display density: {{image.displayDensity | max2decimals}}x
+                        <br>
+                        Recommended max density: {{image.recommendedMaxDensity | max2decimals}}x
+                    </p>
+                    <p>Weight after resize: {{image.newFileSize | bytes}} (<b>-{{image.gain | bytes}}</b>)</p>
                 </div>
             </div>
         </div>
