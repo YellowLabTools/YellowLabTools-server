@@ -387,11 +387,15 @@
                 </div>
                 <div>
                     <p>
-                        Current display density: {{image.displayDensity | max2decimals}}x
+                        Reference density: {{image.referenceDensity | max2decimals}}x
+                        <span ng-if="image.alreadyResized">(after resize)</span>
                         <br>
-                        Recommended max density: {{image.recommendedMaxDensity | max2decimals}}x
+                        Reference weight: {{image.fileSize | bytes}}
                     </p>
-                    <p>Weight after resize: {{image.newFileSize | bytes}} (<b>-{{image.gain | bytes}}</b>)</p>
+                    <p>
+                        Recommended max density: {{image.recommendedMaxDensity | max2decimals}}x
+                        <br>
+                        New weight: {{image.newFileSize | bytes}} (<b>-{{image.gain | bytes}}</b>)</p>
                 </div>
             </div>
         </div>
