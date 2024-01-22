@@ -411,7 +411,7 @@
                 <div>
                     <p><b>sizes="{{image.sizesAttribute}}"</b></p>
                     <p>
-                        On the current device it converts to {{image.convertedInPx}}px,
+                        On the current device it converts to {{image.convertedInPx | max2decimals}}px,
                         <br>
                         but the image is displayed <b>{{image.displayWidth}}px</b> wide.
                     </p>
